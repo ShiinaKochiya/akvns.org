@@ -8,6 +8,7 @@ import type { Member, MemberLink } from "@/components/members";
 
 import { members } from "@/components/members";
 import ProjectsHeader from "@/components/projectHeader";
+import Testimony from "@/components/Testimony";
 import Timeline from "@/components/Timeline";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -80,6 +81,12 @@ export default function MainPage() {
                 <div className={"w-full px-6 py-12"}>
                     <ProjectsHeader onSelect={t => setSelectedType(t)} selected={selectedType} />
                     <Timeline selectedType={selectedType} />
+                </div>
+            </div>
+
+            <div className={"flex h-[160svh] items-center justify-center"}>
+                <div className={"w-full px-6 py-12"}>
+                    <Testimony />
                 </div>
             </div>
         </div>
